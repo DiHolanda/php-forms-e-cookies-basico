@@ -17,6 +17,13 @@
 	<form action="index.php" method="post">
 		
 		<input type="text" name="nome">
+		<input type="email" name="email">
+		<input type="color" name="color">
+		<input type="date" name="date">
+		<input type="datetime" name="datetime">
+		<input type="file" name="file">
+		<input type="number" name="number">
+		
 		<input type="submit" value="Enviar">
 
 	</form>
