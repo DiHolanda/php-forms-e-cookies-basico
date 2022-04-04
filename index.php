@@ -1,14 +1,27 @@
 <?php 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-	if(is_numeric($_POST['idade'])){
-		$idade = (int)$_POST['idade'];
-		if($idade < 18) {
-			die("Site impróprio para menores");
-		}
+	
+	$idade = isset($_POST['idade']) && is_numeric($_POST['idade']) ? 
+		(int)$_POST['idade'] : 
+		null;
 
+	if(is_null($idade)){
+		die("Você deveria informar a sua idade");
+	}
+	
+	if($idade < 18){
+		die("Site impróprio para menores de idade");
+	}
+	else{
 		echo "Pode acessar, você tem " . $idade . " anos";
 	}
+	
+		
+
+
+	
+	
 	
 	
 	
