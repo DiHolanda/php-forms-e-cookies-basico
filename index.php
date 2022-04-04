@@ -1,7 +1,7 @@
 <?php 
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-		echo "Formulário enviado por " . $_POST["nome"];
+		var_dump($_POST);
 		exit();
 	}
 
@@ -21,7 +21,6 @@
 
 	</form>
 
-	<a href="index.php?nome=anônimo"> Sou anônimo </a>
-	<p> <?php echo (!empty($_GET["nome"])) ? "O " . $_GET['nome'] : "Ninguém " ; ?> clicou no link </p>
+	
 </body>
 </html>
