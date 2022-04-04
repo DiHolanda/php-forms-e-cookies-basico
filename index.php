@@ -2,11 +2,10 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	
-	$idade = isset($_POST['idade']) && is_numeric($_POST['idade']) ? 
-		(int)$_POST['idade'] : 
-		null;
+	// ?? é null coalescing operator, ou seja, define null se o valor estiver vazio
+	$idade = (int)$_POST['idade'] ?? null;
 
-	if(is_null($idade)){
+	if(is_null($idade) || $idade == 0){
 		die("Você deveria informar a sua idade");
 	}
 	
