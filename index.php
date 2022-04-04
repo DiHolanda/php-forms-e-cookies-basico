@@ -5,7 +5,7 @@
 	<title>Document</title>
 </head>
 <body>
-	<form action="index.php" method="">
+	<form action="index.php" method="post">
 		
 		<input type="text" name="nome">
 		<input type="submit" value="Enviar">
