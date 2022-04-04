@@ -2,7 +2,9 @@
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		var_dump($_POST);
-		exit();
+
+		// mostra os detalhes de arquivos transmitidos por meio de requisição
+		var_dump($_FILES);
 	}
 
  ?>
@@ -14,7 +16,8 @@
 	<title>PHP Formulário</title>
 </head>
 <body>
-	<form action="index.php" method="post">
+	<!-- o enctype="multipart/form-data permite o envio de arquivo através do input file, em vez de transmitir apenas o nome do arquivo" -->
+	<form action="index.php" method="post" enctype="multipart/form-data">
 		
 		<input type="text" name="nome">
 		<input type="email" name="email">
