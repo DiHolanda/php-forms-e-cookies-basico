@@ -26,6 +26,12 @@
 		<input type="datetime" name="datetime">
 		<input type="file" name="file">
 		<input type="number" name="number">
+
+		<input type="radio" name="radio" value="radio 1">
+		<input type="radio" name="radio" value="radio 2">
+		<input type="radio" name="radio" value="radio 3">
+
+		<input type="checkbox" name="check" value="checado">
 		
 		<input type="submit" value="Enviar">
 
