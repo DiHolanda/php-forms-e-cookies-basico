@@ -1,3 +1,9 @@
+<?php 
+
+	// var_dump($_SERVER["REQUEST_METHOD"]);
+
+ ?>
+
 <html lang="pt_BR">
 <head>
 	<meta charset="UTF-8">
