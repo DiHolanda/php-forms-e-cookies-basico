@@ -1,7 +1,7 @@
 <?php 
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-		echo "Formulário enviado";
+		echo "Formulário enviado por " . $_POST["nome"];
 		exit();
 	}
 
