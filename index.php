@@ -1,8 +1,17 @@
 <?php 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-	echo "Formulário enviado por " . $_POST["nome"];
-	exit();
+	if(is_numeric($_POST['idade'])){
+		$idade = (int)$_POST['idade'];
+		if($idade < 18) {
+			die("Site impróprio para menores");
+		}
+
+		echo "Pode acessar, você tem " . $idade . " anos";
+	}
+	
+	
+	
 }
 
 ?>
@@ -16,12 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
 	<form action="index.php" method="post">
 		
-		<input type="text" name="nome">
+		<input type="text" name="idade" placeholder="idade">
 		<input type="submit" value="Enviar">
 
 	</form>
 
-	<a href="index.php?nome=anônimo"> Sou anônimo </a>
-	<p> <?php echo (!empty($_GET["nome"])) ? "O " . $_GET['nome'] : "Ninguém " ; ?> clicou no link </p>
+	
 </body>
 </html>
