@@ -1,6 +1,9 @@
 <?php 
 
-	// var_dump($_SERVER["REQUEST_METHOD"]);
+	if ($_SERVER["REQUEST_METHOD"] == "POST"){
+		echo "Formulário enviado";
+		exit();
+	}
 
  ?>
 
@@ -8,7 +11,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>PHP Formulário</title>
 </head>
 <body>
 	<form action="index.php" method="post">
