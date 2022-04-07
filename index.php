@@ -2,7 +2,13 @@
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$email = $_POST['email'] ?? null;
+		
+		// filtra o \ que invalidaria o resto do código
+		$email = stripslashes($email);
+
+		// filtra espaços em branco
 		$email = trim($email);
+
 		var_dump($email);
 	}
 
@@ -17,7 +23,7 @@
 <body>
 	<form action="index.php" method="post">
 		
-		<input type="email" name="email">
+		<input type="text" name="email">
 		<input type="submit" value="Enviar">
 
 	</form>
