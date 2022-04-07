@@ -4,21 +4,7 @@
 		$email = $_POST['email'] ?? null;
 		
 		// filtra o \ que invalidaria o resto do código
-		$email = stripslashes($email);
-
-		// filtra espaços em branco
-		$email = trim($email);
-
-
-		// fitra código html da seguinte maneira
-		/*
-		* < => &lt
-		* > => &gt
-		* " => &quote
-		* ' => &#039
-		* & => &amp
-		*/
-		$email = htmlspecialchars($email);
+		$email = filter_input(INPUT_POST, 'email');
 		var_dump($email);
 	}
 
