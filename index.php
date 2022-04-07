@@ -1,11 +1,13 @@
 <?php 
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-		$email = $_POST['email'] ?? null;
+		// filtra a entrada, se estiver vazio o valor fica null
+		// $email - filter_input(INPUT_POST, 'email');
 		
-		// filtra o \ que invalidaria o resto do código
-		$email = filter_input(INPUT_POST, 'email');
-		var_dump($email);
+
+		// assim filtra todas as entradas passadas via POST
+		$dados = filter_input_array(INPUT_POST);
+		var_dump($dados);
 	}
 
  ?>
@@ -20,6 +22,8 @@
 	<form action="index.php" method="post">
 		
 		<input type="text" name="email">
+		<input type="text" name="idade">
+		
 		<input type="submit" value="Enviar">
 
 	</form>
