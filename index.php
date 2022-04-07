@@ -2,12 +2,12 @@
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		// filtra a entrada, se estiver vazio o valor fica null
-		// $email - filter_input(INPUT_POST, 'email');
+		$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
 		
 
 		// assim filtra todas as entradas passadas via POST
-		$dados = filter_input_array(INPUT_POST);
-		var_dump($dados);
+		// $dados = filter_input_array(INPUT_POST);
+		var_dump($email);
 	}
 
  ?>
