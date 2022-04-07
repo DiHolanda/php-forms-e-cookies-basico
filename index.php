@@ -9,6 +9,16 @@
 		// filtra espaços em branco
 		$email = trim($email);
 
+
+		// fitra código html da seguinte maneira
+		/*
+		* < => &lt
+		* > => &gt
+		* " => &quote
+		* ' => &#039
+		* & => &amp
+		*/
+		$email = htmlspecialchars($email);
 		var_dump($email);
 	}
 
