@@ -2,7 +2,10 @@
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		// filtra a entrada sob caracteres especiais
-		$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+		//$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+
+		// valida uma entrada de email, se não passar na validação, retorna false
+		$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 		
 		$idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);
 
