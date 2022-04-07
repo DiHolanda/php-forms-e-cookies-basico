@@ -1,13 +1,15 @@
 <?php 
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-		// filtra a entrada, se estiver vazio o valor fica null
+		// filtra a entrada sob caracteres especiais
 		$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
 		
+		$idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);
 
 		// assim filtra todas as entradas passadas via POST
 		// $dados = filter_input_array(INPUT_POST);
 		var_dump($email);
+		var_dump($idade);
 	}
 
  ?>
