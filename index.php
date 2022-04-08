@@ -5,7 +5,9 @@
 		// extract extrai o conteúdo de array, colocando cada um em uma variável com o mesmo nome da chave
 		extract($_POST);
 
-		var_dump($nome, $idade);
+		// compact faz o inverso, coleta os valores passados via requisição e gera um array
+		$data = compact('nome', 'idade');
+		var_dump($data);
 		
 	}
 
