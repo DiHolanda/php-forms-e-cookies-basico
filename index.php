@@ -1,18 +1,13 @@
 <?php 
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-		// filtra a entrada sob caracteres especiais
-		//$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
-
-		// valida uma entrada de email, se não passar na validação, retorna false
-		$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 		
-		$idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);
+		// isset avalia apenas se o campo existe
+		var_dump(isset($_POST['nome']));
 
-		// assim filtra todas as entradas passadas via POST
-		// $dados = filter_input_array(INPUT_POST);
-		var_dump($email);
-		var_dump($idade);
+		// já o empty avalia se o campo está vazio
+		var_dump(empty($_POST['nome']));
+		
 	}
 
  ?>
@@ -26,12 +21,11 @@
 <body>
 	<form action="index.php" method="post">
 		
-		<input type="text" name="email">
-		<input type="text" name="idade">
-		
+		<input type="text" name="nome">
 		<input type="submit" value="Enviar">
 
 	</form>
 
+	
 </body>
 </html>
