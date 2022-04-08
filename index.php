@@ -2,11 +2,10 @@
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		
-		// isset avalia apenas se o campo existe
-		var_dump(isset($_POST['nome']));
+		// extract extrai o conteúdo de array, colocando cada um em uma variável com o mesmo nome da chave
+		extract($_POST);
 
-		// já o empty avalia se o campo está vazio
-		var_dump(!empty($_POST['nome']));
+		var_dump($nome, $idade);
 		
 	}
 
@@ -22,6 +21,8 @@
 	<form action="index.php" method="post">
 		
 		<input type="text" name="nome">
+		<input type="text" name="idade">
+		
 		<input type="submit" value="Enviar">
 
 	</form>
