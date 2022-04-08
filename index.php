@@ -6,7 +6,7 @@
 		var_dump(isset($_POST['nome']));
 
 		// já o empty avalia se o campo está vazio
-		var_dump(empty($_POST['nome']));
+		var_dump(!empty($_POST['nome']));
 		
 	}
 
