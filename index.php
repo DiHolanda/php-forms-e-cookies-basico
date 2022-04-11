@@ -14,14 +14,15 @@
 	// o cookie chega nem a aparecer se estiver fora da validade, como setando sua expiração em um segundo a menos
 	// setcookie('meu-nome', "Di Holanda", time() - 1);
 
-	/*$_SESSION['usuario'] = [
+	$_SESSION['usuario'] = [
 		"nome" => "Di Holanda",
 		"idade" => 28,
 		"ativo" => true,
 		"rate" => 1000 * 1000000
+	];
 
-	];*/
 
-	unset($_SESSION['usuario']);
+	// apaga dados de sessão
+	//unset($_SESSION['usuario']);
 
 ?>
