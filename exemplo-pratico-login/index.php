@@ -13,3 +13,4 @@ if(!$user){
  ?>
 
  <h1> Olá <?php echo $user['email']; ?> </h1>
+ <a href="./logout.php"> Logout </a>
