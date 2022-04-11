@@ -1,7 +1,7 @@
 <?php 
 
 	// define onde as informações serão salvas na sessão
-	session_save_path(__DIR__.'\sessions');
+	//session_save_path(__DIR__.'\sessions');
 
 	// começa uma sessão
 	session_start();
@@ -14,6 +14,14 @@
 	// o cookie chega nem a aparecer se estiver fora da validade, como setando sua expiração em um segundo a menos
 	// setcookie('meu-nome', "Di Holanda", time() - 1);
 
-	$_SESSION['meu-nome'] = 'Di Holanda';
+	/*$_SESSION['usuario'] = [
+		"nome" => "Di Holanda",
+		"idade" => 28,
+		"ativo" => true,
+		"rate" => 1000 * 1000000
 
- ?>
+	];*/
+
+	unset($_SESSION['usuario']);
+
+?>
