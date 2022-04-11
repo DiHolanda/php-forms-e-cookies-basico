@@ -12,4 +12,4 @@ if(!$user){
 
  ?>
 
- <h1> Olá <?php echo $user; ?> </h1>
+ <h1> Olá <?php echo $user['email']; ?> </h1>
