@@ -21,6 +21,7 @@
 		"rate" => 1000 * 1000000
 	];
 
+	$_SESSION['ultimo-acesso'] = date("d/m/y")
 
 	// apaga dados de sessão
 	//unset($_SESSION['usuario']);
