@@ -11,3 +11,5 @@ if(!$user){
 }
 
  ?>
+
+ <h1> Olá <?php echo $user; ?> </h1>
