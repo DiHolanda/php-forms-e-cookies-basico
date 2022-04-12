@@ -11,6 +11,9 @@
 */
 session_set_cookie_params(60*60, '/exemplo-pratico-login', null, false, true);
 
+ini_set('session.save_handler', 'files');
+ini_set('session.save_path', __DIR__.'/sessions');
+
 session_start();
 
  ?>
