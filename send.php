@@ -14,6 +14,9 @@ $json = file_get_contents("php://input");
 // a seguir converte o que foi salvo em string para o objeto de json
 $json = json_decode($json);
 
+// da forma a seguir, converte em array em vez de objeto
+// $json = json_decode($json, true);
+
 var_dump($json);
 
  ?>
