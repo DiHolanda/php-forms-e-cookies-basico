@@ -7,7 +7,7 @@ header('Content-Type: image/jpeg');
 // além disso, no PHP 8.1.3 que baixei, precisa ter este arquivo, porque vem como php.ini-development
 // e então precisa indicar todo o caminho do módulo gd
 // isso não se fala no curso nem na documentação >:|
-$image = imagecreate(200, 200);
+$image = imagecreate(200, 150);
 $palavra = "";
 
 // gera array com todos os caracteres minúsculos e maiúsculos
