@@ -14,9 +14,9 @@ if($csrf_token !== filter_input(INPUT_POST, "_csrf_token")) {
 
 include __DIR__."/src/valida_captcha.php";
 include __DIR__."/src/expressa_regular.php";
-
-
 include __DIR__."/src/get_data.php";
+include __DIR__."/src/mail.php";
+
 
 echo "Acesso feito com sucesso";
 
