@@ -1,5 +1,7 @@
 <?php 
 
+require __DIR__."/session.php";
+
 // define o conteúdo a ser mostrado na página como imagem
 header('Content-Type: image/jpeg');
 
@@ -11,7 +13,7 @@ $image = imagecreate(200, 150);
 $palavra = "";
 
 // gera array com todos os caracteres minúsculos e maiúsculos
-$caracteres = array_merge(range('a', 'z'), range('A', 'Z'));
+$caracteres = array_merge(range('A', 'Z'));
 
 // embaralha as chaves do array e deixa os valores em ordem aleatória
 shuffle($caracteres);

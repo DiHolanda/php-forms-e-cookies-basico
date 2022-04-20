@@ -12,6 +12,7 @@ if($csrf_token !== filter_input(INPUT_POST, "_csrf_token")) {
     die("CSRF token inválido");
 }
 
+include __DIR__."/src/valida_captcha.php";
 include __DIR__."/src/get_data.php";
 
 //var_dump($_SESSION);

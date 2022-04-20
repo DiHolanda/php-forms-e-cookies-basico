@@ -1,18 +1,18 @@
 <?php 
 
-require __DIR__."/src/session.php";
+require __DIR__."/session.php";
 
 
 
 $captcha = $_SESSION['captcha'] ?? false;
 
-//var_dump($_SESSION['captcha'], filter_input(INPUT_POST, "_captcha"));
+//var_dump($captcha, filter_input(INPUT_POST, "captcha"));
 
-if($captcha !== filter_input(INPUT_POST, "_captcha")) {
+if($captcha !== filter_input(INPUT_POST, "captcha")) {
     die("Captcha inválido");
 }
 
-include __DIR__."/src/get_data.php";
+echo "Acesso feito com sucesso";
 
 //var_dump($_SESSION);
 

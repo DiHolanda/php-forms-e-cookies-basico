@@ -1,7 +1,7 @@
 <?php
 
 require __DIR__."/src/session.php";
-
+require __DIR__."/src/csrf_token.php";
 
 $csrf_token = $_SESSION['csrf_token'];
 ?>
@@ -27,7 +27,7 @@ $csrf_token = $_SESSION['csrf_token'];
 
 		<br>
 
-		<input type="text" placeholder="captcha">
+		<input type="text" name="captcha" placeholder="captcha">
 
 		<input type="submit" value="Enviar">
 	</form>
