@@ -23,15 +23,15 @@ $url = filter_input(INPUT_POST, 'url');
     ^ determina o início
     $ determina o fim
     . qualquer caracter
-    * 0 ou mais
-    + 1 ou mais
+    * 0 ou mais caracteres
+    + 1 ou mais caracteres
     {n, m} mínimo, máximo
     [a-zA-Z] intervalo
 
  */
 
 // verifica o valor a partir de uma expressão regular
-var_dump(preg_match('/^w{3}\.[a-z]+\.[a-z]+$/', $url), $url);
+var_dump(preg_match('/^w{3}\.[a-z]+\.[a-z]+[a-z\.]*$/', $url), $url);
 
 //var_dump($_SESSION);
 
