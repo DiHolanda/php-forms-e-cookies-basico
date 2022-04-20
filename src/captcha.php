@@ -25,7 +25,7 @@ $_SESSION['captcha'] = $palavra;
 imagecolorallocate($image, 0, 0, 0);
 $cor = imagecolorallocate($image, 255, 255, 255);
 //imagettftext(image, size, angle, x, y, color, fontfile, text)
-imagettftext($image, 40, 15, 50, 100, $cor, __DIR__."/../resources/Debrosee-ALPnL.ttf", $palavra);
+imagettftext($image, 40, rand(-15,15), rand(40, 50), rand(80, 100), $cor, __DIR__."/../resources/Debrosee-ALPnL.ttf", $palavra);
 
 imagejpeg($image);
 //imagedestroy($image);
