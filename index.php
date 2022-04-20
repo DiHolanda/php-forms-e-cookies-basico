@@ -21,6 +21,8 @@ $csrf_token = $_SESSION['csrf_token'];
 		<input type="hidden" name="_csrf_token" value="<?php echo $csrf_token; ?>">
 		<input type="text" name="nome" placeholder="Nome"> <br>
 		<input type="email" name="email" placeholder="Email"> <br>
+		<input type="text" name="url" placeholder="Seu site"> <br>
+		
 		<textarea name="mensagem" placeholder="Mensagem"></textarea> <br>
 
 		<img src="src/captcha.php" alt="captcha">
