@@ -13,7 +13,7 @@ if($csrf_token !== filter_input(INPUT_POST, "_csrf_token")) {
 }
 
 include __DIR__."/src/valida_captcha.php";
-include __DIR__."/src/get_data.php";
+
 
 $url = filter_input(INPUT_POST, 'url');
 
@@ -31,7 +31,16 @@ $url = filter_input(INPUT_POST, 'url');
  */
 
 // verifica o valor a partir de uma expressão regular
-var_dump(preg_match('/w{0,3}\.*[a-z]+\.[a-z]+[a-z\.]*$/', $url), $url);
+if(preg_match('/w{0,3}\.*[a-z]+\.[a-z]+[a-z\.]*$/', $url, $matches)){
+    $url = $matches[0];
+}
+else{
+    die("URL inválida");
+}
+
+include __DIR__."/src/get_data.php";
+var_dump($url);
+echo "Acesso feito com sucesso";
 
 //var_dump($_SESSION);
 

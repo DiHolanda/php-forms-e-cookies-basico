@@ -12,7 +12,7 @@ if($captcha !== filter_input(INPUT_POST, "captcha")) {
     die("Captcha inválido");
 }
 
-echo "Acesso feito com sucesso";
+
 
 //var_dump($_SESSION);
 
