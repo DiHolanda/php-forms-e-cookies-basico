@@ -31,7 +31,7 @@ $url = filter_input(INPUT_POST, 'url');
  */
 
 // verifica o valor a partir de uma expressão regular
-var_dump(preg_match('/^w{3}\.[a-z]+\.[a-z]+[a-z\.]*$/', $url), $url);
+var_dump(preg_match('/w{0,3}\.*[a-z]+\.[a-z]+[a-z\.]*$/', $url), $url);
 
 //var_dump($_SESSION);
 
